@@ -246,8 +246,10 @@ public class Polynomial
         MaxPower = 0;
 
         formula = formula.Replace(" ", ""); ;
-        PolynomialUtils.AddPluses(ref formula);
+        PolynomialUtils.AddPluses(ref formula); 
         Formula = formula;
+
+        Console.WriteLine(formula);
 
         for (int i = 0; i < Elements.Length; ++i)
         {
@@ -282,7 +284,7 @@ public class Polynomial
     {
         var n = new Complex(MaxPower, 0);
         Complex a = new(0, 0);
-        Complex x = new(0, 0);
+        Complex x = new(-100, 0);
         Complex y = new(0, 0);
 
         for (int i = 0; i < 1e9; ++i)
@@ -312,6 +314,48 @@ public class Polynomial
         }
 
         return x;
+    }
+
+    public Complex[] Roots()
+    {
+        var elements = PolynomialUtils.PrepareForHorner(this);
+        Complex a, b, c;
+
+        if (MaxPower == 1)
+        {
+            a = PolynomialUtils.ModifierOfElement(elements[0]);
+            b = PolynomialUtils.ModifierOfElement(elements[1]);
+
+            return new Complex[] { -b / a };
+        }
+        else if (MaxPower == 2)
+        {
+            a = PolynomialUtils.ModifierOfElement(elements[0]);
+            b = PolynomialUtils.ModifierOfElement(elements[1]);
+            c = PolynomialUtils.ModifierOfElement(elements[2]);
+
+            var delta = (b ^ 2) - a * 4 * c;
+
+            if (Math.Round(delta.Module) == 0)
+                return new Complex[] { -b / (a * 2) };
+
+            var x1 = (-b + (delta ^ 0.5d)) / (a * 2);
+            var x2 = (-b - (delta ^ 0.5d)) / (a * 2);
+
+            return new Complex[] { x1, x2 };
+        }
+
+        var result = new List<Complex>();
+
+        var x0 = Laguerre();
+        x0.Real = Math.Round(x0.Real);
+        x0.Imaginal = Math.Round(x0.Imaginal);
+        var formula = string.Format("x + {0}", -x0);
+
+        result.Add(x0);
+        result.AddRange(PolynomialUtils.Horner(this, new Polynomial(formula)).Roots());
+
+        return result.ToArray();
     }
 
     public override string ToString()
