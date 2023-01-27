@@ -1,0 +1,15 @@
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\bin\Debug\net6.0\Wielomiany.exe
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\bin\Debug\net6.0\Wielomiany.deps.json
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\bin\Debug\net6.0\Wielomiany.runtimeconfig.json
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\bin\Debug\net6.0\Wielomiany.dll
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\bin\Debug\net6.0\Wielomiany.pdb
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.csproj.AssemblyReference.cache
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.AssemblyInfoInputs.cache
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.AssemblyInfo.cs
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.csproj.CoreCompileInputs.cache
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.dll
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\refint\Wielomiany.dll
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.pdb
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\Wielomiany.genruntimeconfig.cache
+C:\Users\konis\Desktop\Kurs C++\Wielomiany\obj\Debug\net6.0\ref\Wielomiany.dll
