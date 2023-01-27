@@ -282,11 +282,14 @@ public class Polynomial
     {
         var n = new Complex(MaxPower, 0);
         Complex a = new(0, 0);
-        Complex x = new(1, 0);
+        Complex x = new(0, 0);
+        Complex y = new(0, 0);
 
         for (int i = 0; i < 1e9; ++i)
         {
-            if (x.Module >= double.Epsilon)
+            y = Value(x);
+
+            if (Math.Round(y.Module) == 0)
                 return x;
 
             var df = PolynomialUtils.Derivative(this);
@@ -302,8 +305,9 @@ public class Polynomial
                 a = n / d2;
 
             x = x - a;
+            y = Value(x);
 
-            if (a.Module >= double.Epsilon)
+            if (Math.Round(y.Module) == 0)
                 return x;
         }
 

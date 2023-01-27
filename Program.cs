@@ -2,4 +2,4 @@
 Polynomial W = new(Console.ReadLine());
 
 Console.WriteLine("W(x) = " + W);
-Console.WriteLine("Q(x) = " + PolynomialUtils.Horner(W, new Polynomial("x - i")));
+Console.WriteLine("Q(x) = " + W.Laguerre());
